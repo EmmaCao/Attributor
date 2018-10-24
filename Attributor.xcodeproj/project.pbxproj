@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4499F50B21801DE600863012 /* TextStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4499F50A21801DE600863012 /* TextStatsViewController.m */; };
 		B554DF94217EFC20000B54A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B554DF93217EFC20000B54A6 /* AppDelegate.m */; };
 		B554DF97217EFC20000B54A6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B554DF96217EFC20000B54A6 /* ViewController.m */; };
 		B554DF9A217EFC20000B54A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B554DF98217EFC20000B54A6 /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4499F50921801DE600863012 /* TextStatsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextStatsViewController.h; sourceTree = "<group>"; };
+		4499F50A21801DE600863012 /* TextStatsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextStatsViewController.m; sourceTree = "<group>"; };
 		B554DF8F217EFC20000B54A6 /* Attributor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Attributor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B554DF92217EFC20000B54A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B554DF93217EFC20000B54A6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -62,6 +65,8 @@
 				B554DF95217EFC20000B54A6 /* ViewController.h */,
 				B554DF96217EFC20000B54A6 /* ViewController.m */,
 				B554DF98217EFC20000B54A6 /* Main.storyboard */,
+				4499F50921801DE600863012 /* TextStatsViewController.h */,
+				4499F50A21801DE600863012 /* TextStatsViewController.m */,
 				B554DF9B217EFC22000B54A6 /* Assets.xcassets */,
 			);
 			path = Attributor;
@@ -152,6 +157,7 @@
 				B554DF97217EFC20000B54A6 /* ViewController.m in Sources */,
 				B554DFA2217EFC22000B54A6 /* main.m in Sources */,
 				B554DF94217EFC20000B54A6 /* AppDelegate.m in Sources */,
+				4499F50B21801DE600863012 /* TextStatsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

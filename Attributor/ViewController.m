@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "TextStatsViewController.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *body;
@@ -16,16 +17,32 @@
 
 @implementation ViewController
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"Analyze Text"]) {
+        if([segue.destinationViewController isKindOfClass:[TextStatsViewController class]]){
+            TextStatsViewController *tsvc = (TextStatsViewController *)segue.destinationViewController;
+            tsvc.textToAnalyze = self.body.textStorage;
+        }
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    NSMutableAttributedString *title =
-    [[NSMutableAttributedString alloc] initWithString:self.outlineButton.currentTitle];
-    [title setAttributes:@{NSStrokeWidthAttributeName:@3,
-                           NSStrokeColorAttributeName:self.outlineButton.tintColor
-                           } range:NSMakeRange(0, title.length)];
-    [self.outlineButton setAttributedTitle:title forState:UIControlStateNormal];
+    [self setupOutlineButton];
+}
+
+-(void)setupOutlineButton
+{
+    if (self.outlineButton.currentTitle) {
+        NSMutableAttributedString *title =
+        [[NSMutableAttributedString alloc] initWithString:self.outlineButton.currentTitle];
+        [title setAttributes:@{NSStrokeWidthAttributeName:@3,
+                               NSStrokeColorAttributeName:self.outlineButton.tintColor
+                               } range:NSMakeRange(0, title.length)];
+        [self.outlineButton setAttributedTitle:title forState:UIControlStateNormal];
+    }
 }
 
 -(void)viewWillAppear:(BOOL)animated
